@@ -128,3 +128,19 @@ switch (fruit) {
     console.log("Unknown fruit.");
     break;
 }
+
+// Section 7: Truthy and Falsy Values
+// In JavaScript, certain values are considered "falsy" (evaluates to false in a boolean context) and others are "truthy" (evaluates to true).
+if (10) {
+  console.log("is true");
+} else {
+  console.log("is false");
+}
+// string with content is truthy
+// empty string is falsy
+// positive number is truthy
+// negative number is truthy
+// zero is falsy
+// null is falsy
+// undefined is falsy
+// NaN (Not a Number) is falsy
