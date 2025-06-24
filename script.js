@@ -61,8 +61,9 @@ if (temperature > 20) {
 
 const age = 22;
 const hasLicence = true;
+const disqualified = false;
 
-if (age >= 18 && hasLicence) {
+if (age >= 18 && hasLicence && !disqualified) {
   console.log("You can drive.");
 }
 if (hasLicence === true) {
