@@ -74,3 +74,27 @@ if (age >= 18 && hasLicence === true) {
 } else {
   console.log("You cannot drive.");
 }
+
+// OR (||) requires at least one condition to be true.
+if (age < 18 || !hasLicence) {
+  console.log("You cannot drive.");
+}
+if (age < 18 || hasLicence === false) {
+  console.log("You cannot drive.");
+}
+if (age < 18 || hasLicence === false || disqualified) {
+  console.log("You cannot drive.");
+}
+
+const day = "Saturday";
+if (day === "Saturday" || day === "Sunday") {
+  console.log("It's the weekend!");
+} else if (
+  day === "Monday" ||
+  day === "Tuesday" ||
+  day === "Wednesday" ||
+  day === "Thursday" ||
+  day === "Friday"
+) {
+  console.log("It's a weekday.");
+}
