@@ -100,9 +100,11 @@ if (["Saturday", "Sunday"].includes(day)) {
 // Section 5: Ternary Operator
 // The ternary operator is a shorthand way to write an if-else statement.
 
+// DRY (Don't Repeat Yourself) principle
+// The ternary operator is a shorthand way to write an if-else statement.
 const isMember = false; // Change this to true or false to test
-const fee = isMember ? "You pay £5" : "You pay £10";
-console.log(fee); // prints "You pay £5"
+const fee = isMember ? "£5" : "£10";
+console.log("You pay", fee); // prints "You pay £10" if isMember is false, "You pay £5" if isMember is true
 // if (isMember === true) {
 //   console.log("You pay £5");
 // } else {
