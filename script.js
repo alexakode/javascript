@@ -87,10 +87,24 @@ if (age < 18 || hasLicence === false || disqualified) {
 }
 
 const day = "Saturday"; // Valid, it's case-sensitive
-if (day === "Saturday" || day === "Sunday") {
+if (["Saturday", "Sunday"].includes(day)) {
   console.log("It's the weekend!");
-} else if (["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(day)) {
+} else if (
+  ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(day)
+) {
   console.log("It's a weekday.");
 } else {
   console.log("Invalid day.");
 }
+
+// Section 5: Ternary Operator
+// The ternary operator is a shorthand way to write an if-else statement.
+
+const isMember = false; // Change this to true or false to test
+const fee = isMember ? "You pay £5" : "You pay £10";
+console.log(fee); // prints "You pay £5"
+// if (isMember === true) {
+//   console.log("You pay £5");
+// } else {
+//   console.log("You pay £10");
+// }
