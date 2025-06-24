@@ -44,7 +44,7 @@ if (a < b) {
 } else {
   console.log("a is equal to b");
 }
-let temperature = 28;
+let temperature = 10;
 if (temperature > 25) {
   console.log("It's hot outside.");
 } else if (temperature < 20) {
