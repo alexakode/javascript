@@ -89,13 +89,7 @@ if (age < 18 || hasLicence === false || disqualified) {
 const day = "saturday"; // Invalid, it's case-sensitive
 if (day === "Saturday" || day === "Sunday") {
   console.log("It's the weekend!");
-} else if (
-  day === "Monday" ||
-  day === "Tuesday" ||
-  day === "Wednesday" ||
-  day === "Thursday" ||
-  day === "Friday"
-) {
+} else if (["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(day)) {
   console.log("It's a weekday.");
 } else {
   console.log("Invalid day.");
