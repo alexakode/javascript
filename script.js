@@ -86,7 +86,7 @@ if (age < 18 || hasLicence === false || disqualified) {
   console.log("You cannot drive.");
 }
 
-const day = "saturday"; // Invalid, it's case-sensitive
+const day = "Saturday"; // Valid, it's case-sensitive
 if (day === "Saturday" || day === "Sunday") {
   console.log("It's the weekend!");
 } else if (["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(day)) {
