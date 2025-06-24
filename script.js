@@ -149,3 +149,11 @@ if (10) {
 // - null
 // - undefined
 // - NaN (Not a Number)
+
+// Section 8: Template literal/string
+const firstName = "Ola";
+const lastName = "Nordmann";
+// Template literals allow for multi-line strings and string interpolation.
+const fullName = `Your full name is ${firstName} ${lastName}`; // Using template literals for string
+//const fullName = firstName + " " + lastName;
+console.log(fullName); // prints "Your full name is Ola Nordmann"
