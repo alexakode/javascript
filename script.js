@@ -34,3 +34,21 @@ console.log(15 != 15); // prints "false"  != not equal to (both are equal, so fa
 console.log(15 != "15"); // prints "false"  != not equal to (type coercion occurs, string is converted to number)
 console.log(15 !== 15); // prints "false"  !== strict not equal to
 console.log(15 !== "15"); // prints "true"  !== strict not equal to (different types, number vs string)
+
+// Section 3: Conditional Statements
+// Conditional statements allow you to execute different code based on certain conditions.
+if (a < b) {
+  console.log("a is less than b");
+} else if (a > b) {
+  console.log("a is greater than b");
+} else {
+  console.log("a is equal to b");
+}
+let temperature = 28;
+if (temperature > 25) {
+  console.log("It's hot outside.");
+} else if (temperature < 20) {
+  console.log("It's cold outside.");
+} else {
+  console.log("It's mild outside.");
+}
