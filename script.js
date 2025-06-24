@@ -44,11 +44,32 @@ if (a < b) {
 } else {
   console.log("a is equal to b");
 }
-let temperature = 10;
-if (temperature > 25) {
+let temperature = -5;
+if (temperature > 20) {
   console.log("It's hot outside.");
-} else if (temperature < 20) {
+} else if (temperature >= 10) {
+  console.log("It's mid outside.");
+} else if (temperature >= 0) {
   console.log("It's cold outside.");
 } else {
-  console.log("It's mild outside.");
+  console.log("It's freezing!.");
+}
+
+// Section 4: Logical operators: AND (&&) and OR (||)
+
+// AND (&&) requires both conditions to be true.
+
+const age = 22;
+const hasLicence = true;
+
+if (age >= 18 && hasLicence) {
+  console.log("You can drive.");
+}
+if (hasLicence === true) {
+  console.log("You can drive.");
+}
+if (age >= 18 && hasLicence === true) {
+  console.log("You can drive.");
+} else {
+  console.log("You cannot drive.");
 }
