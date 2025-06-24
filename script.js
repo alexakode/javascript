@@ -136,13 +136,16 @@ if (10) {
 } else {
   console.log("is false");
 }
-// string with content is truthy
-// empty string is falsy
-// positive number is truthy
-// negative number is truthy
-// zero is falsy
-// null is falsy
-// undefined is falsy
-// NaN (Not a Number) is falsy
-// empty array is truthy
-// empty object is truthy
+// Truthy values:
+// - string with content
+// - positive number
+// - negative number
+// - empty array
+// - empty object
+
+// Falsy values:
+// - empty string
+// - zero
+// - null
+// - undefined
+// - NaN (Not a Number)
