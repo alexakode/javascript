@@ -144,3 +144,5 @@ if (10) {
 // null is falsy
 // undefined is falsy
 // NaN (Not a Number) is falsy
+// empty array is truthy
+// empty object is truthy
