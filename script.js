@@ -110,3 +110,21 @@ console.log("You pay", fee); // prints "You pay £10" if isMember is false, "You
 // } else {
 //   console.log("You pay £10");
 // }
+
+// Section 6: Switch Statement
+// The switch statement is used to execute one block of code among many options based on the value of a variable.
+const fruit = "apple";
+switch (fruit) {
+  case "banana":
+    console.log("You chose a banana.");
+    break;
+  case "orange":
+    console.log("You chose an orange.");
+    break;
+  case "apple":
+    console.log("You chose an apple.");
+    break;
+  default:
+    console.log("Unknown fruit.");
+    break;
+}
