@@ -117,6 +117,8 @@ Prøv å endre userMale til både true og false og bruk console.log for å sjekk
 at betingelsen din fungerer som den skal.
 ******************************************************************************/
 
-const userMale = false;
+const userMale = true; // Endre denne til false for å teste begge tilfeller
 
 // Skriv koden for oppgave 5 her
+let userTitle = userMale ? "Mr." : "Mrs.";
+console.log("Brukertittel:", userTitle);
