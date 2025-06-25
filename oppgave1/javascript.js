@@ -44,16 +44,16 @@ let a = 10;
 let b = 3;
 
 // Matematiske operatorer
-let sum = a + b;      // 13
-let diff = a - b;     // 7
-let prod = a * b;     // 30
-let div = a / b;      // 3.333...
+let sum = a + b; // 13
+let diff = a - b; // 7
+let prod = a * b; // 30
+let div = a / b; // 3.333...
 
 // Forkortede operatorer
-a++;                  // a blir 11
-b--;                  // b blir 2
-a += 5;               // a blir 16
-b -= 1;               // b blir 1
+a++; // a blir 11
+b--; // b blir 2
+a += 5; // a blir 16
+b -= 1; // b blir 1
 
 console.log("Sum:", sum);
 console.log("Differanse:", diff);
@@ -80,15 +80,27 @@ med console.log.
 
 Prøv å endre verdiene på variablene for å sikre at IF/ELSE-setningen din 
 håndterer alle tilfeller korrekt.
-******************************************************************************/
-
 let userName = "";
 let userAge = 18;
 let userIsLoggedIn = false;
 let userIsBlocked = false;
 let goToPage = "";
+******************************************************************************/
+
+let userName = "Alexander";
+let userAge = 15;
+let userIsLoggedIn = false;
+let userIsBlocked = false;
+let goToPage = "";
 
 // Skriv koden for oppgave 4 her
+if (userName !== "" && userAge >= 18 && userIsBlocked === false) {
+  userIsLoggedIn = true;
+  goToPage = "/home";
+  console.log("Velkommen, " + userName + "!");
+} else {
+  console.log("Feil: Du kan ikke logge inn.");
+}
 
 /******************************************************************************
 OPPGAVE 5
