@@ -25,7 +25,10 @@ const når du definerer variablene.
 ******************************************************************************/
 
 // Skriv koden for oppgave 2 her
-
+let myString = "Hei, verden!";
+const myNumber = 42;
+let myBoolean = true;
+const myArray = [1, 2, 3, 4, 5];
 /******************************************************************************
 OPPGAVE 3
 
@@ -37,7 +40,27 @@ Skriv noen eksempler der du tester disse operatorene.
 ******************************************************************************/
 
 // Skriv koden for oppgave 3 her
+let a = 10;
+let b = 3;
 
+// Matematiske operatorer
+let sum = a + b;      // 13
+let diff = a - b;     // 7
+let prod = a * b;     // 30
+let div = a / b;      // 3.333...
+
+// Forkortede operatorer
+a++;                  // a blir 11
+b--;                  // b blir 2
+a += 5;               // a blir 16
+b -= 1;               // b blir 1
+
+console.log("Sum:", sum);
+console.log("Differanse:", diff);
+console.log("Produkt:", prod);
+console.log("Kvotient:", div);
+console.log("a etter ++ og += 5:", a);
+console.log("b etter -- og -= 1:", b);
 /******************************************************************************
 OPPGAVE 4
 
