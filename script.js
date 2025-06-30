@@ -121,9 +121,11 @@ updateHP(25, "up");
 console.log(hp);
 
 //Example 2
-const newArray = []
-function updateArray() {
-    newArray.push(1)
+const newArray = [];
+function updateArray(data) {
+  newArray.push(data);
 }
-updateArray()
+updateArray(1);
+updateArray(6);
+updateArray(3);
 console.log(newArray);
