@@ -46,3 +46,12 @@ function add() {
   return 3 + 4;
 }
 console.log(add());
+
+// Soft coded function with argument and parameters
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+console.log(subtract(3, 4));
+console.log(subtract(10, 5));
+console.log(subtract(345, 34));
+console.log(subtract(631, 1));
