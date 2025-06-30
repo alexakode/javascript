@@ -102,3 +102,20 @@ console.log(calculator(5, 6, "-"));
 console.log(calculator(5, 6, "*"));
 console.log(calculator(5, 6, "/"));
 
+// Section 7: Updating a global variable via a function
+
+let hp = 100;
+
+const updateHP = (amount, direction) => {
+  if (direction === "down") {
+    hp -= amount;
+  } else if (direction === "up") {
+    hp += amount;
+  }
+};
+
+updateHP(50, "down");
+console.log(hp);
+
+updateHP(25, "up");
+console.log(hp);
