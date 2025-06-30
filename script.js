@@ -63,9 +63,16 @@ console.log(subtract(631, 1));
 // };
 
 const greeter = (time, name) => {
-  return `Good time name`;
+  return `Good ${time} ${name}`;
 };
 
-console.log(greeter("Morning", "Joe"));
-console.log(greeter("Evening", "Ole"));
-console.log(greeter("Afternoon", "Bill"));
+// console.log(greeter("Morning", "Joe"));
+// console.log(greeter("Evening", "Ole"));
+// console.log(greeter("Afternoon", "Bill"));
+
+const userData = {
+  userName: "Joe",
+  address: "123 wherever",
+  tel: 49348349,
+};
+console.log(greeter("Morning", userData.userName));
