@@ -55,3 +55,17 @@ console.log(subtract(3, 4));
 console.log(subtract(10, 5));
 console.log(subtract(345, 34));
 console.log(subtract(631, 1));
+
+//Example 3 - a greeter function that uses parameters and template literals.
+
+// const greeter = (time, name) => {
+//   return "Good" + " " + time + " " + name;
+// };
+
+const greeter = (time, name) => {
+  return `Good time name`;
+};
+
+console.log(greeter("Morning", "Joe"));
+console.log(greeter("Evening", "Ole"));
+console.log(greeter("Afternoon", "Bill"));
