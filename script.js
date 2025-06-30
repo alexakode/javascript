@@ -41,3 +41,8 @@ changeArray();
 console.log(myArray);
 
 // Section 4: Functions with pararmeters
+
+function add() {
+  return 3 + 4;
+}
+console.log(add());
