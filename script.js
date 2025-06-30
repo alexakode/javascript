@@ -129,3 +129,16 @@ updateArray(1);
 updateArray(6);
 updateArray(3);
 console.log(newArray);
+
+// Section 8: Using template literals and ternary operator in a function
+
+const fruits = ["Banana", "Apple", "Pear", "Kiwi"];
+const drinks = ["coke", "water", "milk", "orange juice"];
+
+const checkItem = (item, array) =>
+  `The array ${array.includes(item) ? "does" : "doesn't"} include ${item}`;
+console.log(checkItem("Apple", fruits));
+console.log(checkItem("Kiwi", fruits));
+console.log(checkItem("Grapes", fruits));
+console.log(fruits.includes("Apple"));
+console.log(checkItem("milk", drinks));
