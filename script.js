@@ -76,3 +76,29 @@ const userData = {
   tel: 49348349,
 };
 console.log(greeter("Morning", userData.userName));
+
+//Section 5: Implicit Return in arrow functions
+const adder = (num1, num2) => num1 + num2;
+console.log(adder(10, 5));
+
+// Section 6: calculator using switch statement
+
+function calculator(num1, num2, operator) {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      return num1 / num2;
+    default:
+      return "Invalid operator";
+  }
+}
+console.log(calculator(5, 6, "+"));
+console.log(calculator(5, 6, "-"));
+console.log(calculator(5, 6, "*"));
+console.log(calculator(5, 6, "/"));
+
