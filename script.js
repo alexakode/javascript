@@ -1,13 +1,43 @@
 //Lesson 4: Functions in JavaScript
 
 //Section 1: Function Declarations and hoisting
-//
+//Hoisting is running a function before it's declared
 
 function sayHello() {
   console.log("Hello");
 }
 
 sayHello();
-sayHello();
-sayHello();
-sayHello();
+
+//Section 2: Arrow Funcions (Introduced in JS6, great for short, inline functions
+
+const arrowFunction = () => {
+  console.log("Hello from the arrow function");
+};
+
+arrowFunction();
+
+// Section 3: Return statements and scope
+function one() {
+  console.log("This function logs a message without returning a value");
+  const sum = 1 + 1;
+}
+one();
+
+function two() {
+  const myMessage = "This message is returned from the function";
+  return myMessage; //Console.log'ing does not work outside the scope of the function
+  return myMessage; //This does not work, nothing is read from a function after return
+}
+
+console.log(two());
+
+const myArray = [1, 2, 3];
+
+function changeArray() {
+  myArray[2] = 100;
+}
+changeArray();
+console.log(myArray);
+
+// Section 4: Functions with pararmeters
