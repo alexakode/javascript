@@ -42,5 +42,55 @@ colors.unshift("Purple"); //adds to the beginning of the array
 console.log(colors);
 
 const newColors = colors.toSpliced(1, 1, "Orange");
-console.log(colors)
-console.log(newColors)
+console.log(colors);
+console.log(newColors);
+const unsortedArray = [1, 6, 1, 8];
+const sortedArray = unsortedArray.toSorted();
+console.log(unsortedArray);
+console.log(sortedArray);
+
+const unsortedStringArray = ["c", "a", "b"];
+const sortedStringArray = unsortedStringArray.toSorted();
+console.log(sortedStringArray);
+console.log(sortedArray.at(0)); // accesses the first element using a positive index
+console.log(sortedArray.at(-1)); // accesses the last element using a negative index
+const reversedArray = sortedArray.toReversed();
+console.log(reversedArray);
+
+//Section 3: Number Methods
+
+const myNum = 5.949359;
+console.log(myNum.toFixed(2));
+console.log(myNum.toString());
+console.log(myNum.toExponential());
+
+//Section 4: Chaining methods together
+
+//Example 1: Chaining string methods
+
+const rawString = "  JavaScript is FUN!   ";
+const processedString = rawString
+  .trim()
+  .replace("FUN", "AWESOME")
+  .toLowerCase();
+
+console.log(processedString);
+
+//Example 2: Chaining array and string method
+
+const words = ["Hello", "World"];
+const stringFromArray = words.join(" ");
+console.log(stringFromArray);
+
+// Example 3: Chaining number and string methods
+const chainedNum = myNum.toFixed(2).toString().repeat(2);
+console.log(chainedNum);
+
+//JSON - JavaScript Object Notation
+const jsonExample = `{
+    "employees":[
+        {"firstName":"John", "lastName":"Doe"},
+        {"firstName":"Anna", "lastName":"Smith"},
+        {"firstName":"Peter", "lastName":"Jones"}
+    ]
+}`
