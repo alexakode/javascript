@@ -4,12 +4,7 @@ const shoppingList = ["milk", "bread", "cheese"];
 const gamesList = ["mario kart", "GTA6", "hello kitty island"];
 
 function checkItem(item, itemArray) {
-  let included = "";
-  if (itemArray.includes(item)) {
-    included = "does";
-  } else {
-    included = "doesn't";
-  }
+  let included = itemArray.includes(item) ? "does" : "doesn't";
   return `The array ${included} include ${item}`;
 }
 
