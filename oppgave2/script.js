@@ -23,6 +23,13 @@ funksjonen)
 
 // Skriv koden for oppgave 1 her
 // if function mod 2 == 0, partall, else oddetall
+function partall(num1) {
+  if (num1 % 2 == 0) {
+    console.log("Partall");
+  } else {
+    console.log("Oddetall");
+  }
+}
 /******************************************************************************
 2.
 
