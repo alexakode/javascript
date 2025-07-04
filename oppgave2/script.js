@@ -30,6 +30,9 @@ function partall(num1) {
     console.log("Oddetall");
   }
 }
+console.log(partall(1));
+console.log(partall(2));
+
 /******************************************************************************
 2.
 
@@ -43,7 +46,11 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 // Skriv koden for oppgave 2 her
-// String.touppercase
+function uppercase(string) {
+  return string.toUpperCase();
+}
+console.log(uppercase("Dette er kult"));
+
 /******************************************************************************
 3.
 
@@ -68,6 +75,22 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 // Skriv koden for oppgave 3 her
 // if, elseif
+function greetUser(name, time) {
+  let greeting;
+  if (time < 0 || time > 23) {
+    greeting = "ugyldig tid";
+  } else if (time <= 5) {
+    greeting = "God natt";
+  } else if (time <= 11) {
+    greeting = "God formiddag";
+  } else if (time <= 17) {
+    greeting = "God dag";
+  } else {
+    greeting = "God kveld";
+  }
+  return `${greeting}, ${name}`;
+}
+console.log(greetUser("Joe", 22));
 /******************************************************************************
 4.
 
@@ -114,7 +137,7 @@ fullføres ved å bruke passende array-metoder.
 
 *******************************************************************************/
 
-const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
+// const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
 
 /*******************************************************************************
 Steg 1: Fjern det første elementet ("Bok") fra arrayen ved hjelp av riktig metode.
