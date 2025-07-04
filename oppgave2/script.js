@@ -146,13 +146,6 @@ fullføres ved å bruke passende array-metoder.
 
 *******************************************************************************/
 
-const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
-function changeArray() {
-  items.pop();
-  items.splice(items.indexOf("Viskelær"), 1, "Linjal");
-  items.splice(items.indexOf("Penn", "Notatbok"), 1, "Markeringspenn");
-}
-console.log(changeArray(items));
 /*******************************************************************************
 Steg 1: Fjern det første elementet ("Bok") fra arrayen ved hjelp av riktig metode.
 
@@ -168,6 +161,17 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 // Skriv koden for oppgave 6 her
 
+const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
+function changeArray() {
+  items.shift();
+  const index1 = items.indexOf("Viskelær");
+  items.splice(index1, 1, "Linjal");
+  const index2 = items.indexOf("Penn");
+  items.splice(index2, 2, "Markeringspenn");
+  const stringArray = items.join("|");
+  return stringArray;
+}
+console.log(changeArray());
 /******************************************************************************
 7.
 
