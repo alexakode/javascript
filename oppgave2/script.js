@@ -107,7 +107,13 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
-// trim
+// shift, pop
+function førstSist(arr) {
+  arr.pop();
+  arr.shift();
+  return arr;
+}
+console.log(førstSist(["Rød", "Grønn", "Blå", "Gul"]));
 /******************************************************************************
 5.
 
@@ -128,7 +134,10 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // Skriv koden for oppgave 5 her
-
+function sanitise(str) {
+  return str.replace("vanskelig", "gøy");
+}
+console.log(sanitise("Javascript er vanskelig"));
 /******************************************************************************
 6.
 
@@ -137,8 +146,13 @@ fullføres ved å bruke passende array-metoder.
 
 *******************************************************************************/
 
-// const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
-
+const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
+function changeArray() {
+  items.pop();
+  items.splice(items.indexOf("Viskelær"), 1, "Linjal");
+  items.splice(items.indexOf("Penn", "Notatbok"), 1, "Markeringspenn");
+}
+console.log(changeArray(items));
 /*******************************************************************************
 Steg 1: Fjern det første elementet ("Bok") fra arrayen ved hjelp av riktig metode.
 
