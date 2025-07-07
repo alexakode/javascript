@@ -23,19 +23,30 @@ createOrder("milo", "unknown");      // "Hi Milo! Your Pasta will arrive in an u
 */
 
 // possible random food options
-const menuItems = [
-  "burger",
-  "pizza",
-  "sushi",
-  "ramen",
-  "tacos",
-  "fries",
-  "burrito",
-  "salad",
-  "sandwich",
-  "pasta",
-]; 
-
+function createOrder(name, deliveryStatus) {
+  const menuItems = [
+    "burger",
+    "pizza",
+    "sushi",
+    "ramen",
+    "tacos",
+    "fries",
+    "burrito",
+    "salad",
+    "sandwich",
+    "pasta",
+  ];
+  let time;
+  if (deliveryStatus === "on time") {
+    time = "30 minutes";
+  } else if (deliveryStatus === "late") {
+    time = "45 minutes";
+  } else {
+    time = "an unknown time";
+  }
+  const randomItem = menuItems[Math.floor(Math.random() * menuItems.length)];
+  return `Hi ${name}! Your ${randomItem} will arrive in ${time}!`;
+}
 /* TASK 2: Password Strength Checker Assignment
 
 Your task is to write a JavaScript function that checks how strong a user's password is.
