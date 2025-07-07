@@ -45,8 +45,15 @@ function createOrder(name, deliveryStatus) {
     time = "an unknown time";
   }
   const randomItem = menuItems[Math.floor(Math.random() * menuItems.length)];
-  return `Hi ${name}! Your ${randomItem} will arrive in ${time}!`;
+  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+  const capitalizedItem =
+    randomItem.charAt(0).toUpperCase() + randomItem.slice(1);
+  return `Hi ${capitalizedName}! Your ${capitalizedItem} will arrive in ${time}!`;
 }
+console.log(createOrder("alexander", "on time"));
+console.log(createOrder("luca", "on time"));
+console.log(createOrder("tina", "late"));
+console.log(createOrder("milo", "unknown"));
 /* TASK 2: Password Strength Checker Assignment
 
 Your task is to write a JavaScript function that checks how strong a user's password is.
@@ -71,3 +78,21 @@ checkPasswordStrength("longpassword?");    // "Medium"
 checkPasswordStrength("%myNewPass!");      // "Strong"
 */
 const usedPasswords = ["password123!", "helloWorld!", "qwerty&"]; // previously used passwords
+const symbols = ["&", "%", "!", "?"];
+function checkPasswordStrength(password) {
+  const hasSymbol = symbols.some((sym) => password.includes(sym));
+  const symbolCount = symbols.filter((sym) => password.includes(sym)).length;
+  if (usedPasswords.includes(password)) {
+    return "This password has been used before. Please choose a new one.";
+  } else if (password.length <= 6 || !hasSymbol) {
+    return "Too weak";
+  } else if (password.length >= 8 && symbolCount >= 2) {
+    return "Strong";
+  } else {
+    return "Medium";
+  }
+}
+console.log(checkPasswordStrength("abc"));
+console.log(checkPasswordStrength("password123!"));
+console.log(checkPasswordStrength("longpassword?"));
+console.log(checkPasswordStrength("%myNewPass!"));
