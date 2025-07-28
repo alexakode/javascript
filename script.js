@@ -28,6 +28,6 @@ for (let i = 0; i < names.length; i += 2) {
   console.log(`Hei ${names[i]}!`);
 }
 // 5. for of loop, ferdigkonfigurerte løkker
-for (const name of names) {
+for (let name of names) {
   console.log(`Hei ${name}!`);
 }
