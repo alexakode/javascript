@@ -17,7 +17,13 @@ console.log(`Hei ${names[3]}!`);
 
 console.log(`Hei ${names[4]}!`);
 
-// 4.
+// 4. for-loops
 for (let i = 0; i < names.length; i++) {
+  console.log(`Hei ${names[i]}!`);
+}
+for (let i = names.length - 1; i >= 0; i--) {
+  console.log(`Hei ${names[i]}!`);
+}
+for (let i = 0; i < names.length; i+= 2) {
   console.log(`Hei ${names[i]}!`);
 }
