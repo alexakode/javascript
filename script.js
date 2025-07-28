@@ -31,3 +31,13 @@ for (let i = 0; i < names.length; i += 2) {
 for (let name of names) {
   console.log(`Hei ${name}!`);
 }
+// 6. while loop
+// while kan brukes når vi ikke vet hvor mange ganger vi skal kjøre løkken. Vi spesifiserer parameter i ()
+const secretNumber = 7;
+const randomNumber = Math.ceil(Math.random() * 10); // Random number between 1 and 10, floor rounds down, ceil up and round nearest
+let guess = 0;
+while (guess !== randomNumber) {
+  guess++; // guess = guess + 1;
+  console.log("Guessing " + guess);
+}
+console.log("The secret number was " + guess);
