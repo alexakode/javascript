@@ -18,6 +18,7 @@ console.log(`Hei ${names[3]}!`);
 console.log(`Hei ${names[4]}!`);
 
 // 4. for-loops
+// loop keywords: BREAK and CONTINUE
 for (let i = 0; i < names.length; i++) {
   console.log(`Hei ${names[i]}!`);
 }
@@ -25,6 +26,12 @@ for (let i = names.length - 1; i >= 0; i--) {
   console.log(`Hei ${names[i]}!`);
 }
 for (let i = 0; i < names.length; i += 2) {
+  console.log(`Hei ${names[i]}!`);
+}
+for (let i = 0; i < names.length; i++) {
+  if (names[i] === "Ole") {
+    break; // skip this iteration
+  }
   console.log(`Hei ${names[i]}!`);
 }
 // 5. for of loop, ferdigkonfigurerte løkker
