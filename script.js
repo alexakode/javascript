@@ -24,6 +24,10 @@ for (let i = 0; i < names.length; i++) {
 for (let i = names.length - 1; i >= 0; i--) {
   console.log(`Hei ${names[i]}!`);
 }
-for (let i = 0; i < names.length; i+= 2) {
+for (let i = 0; i < names.length; i += 2) {
   console.log(`Hei ${names[i]}!`);
+}
+// 5. for of loop, ferdigkonfigurerte løkker
+for (const name of names) {
+  console.log(`Hei ${name}!`);
 }
