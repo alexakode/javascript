@@ -84,6 +84,8 @@ for (let person of people) {
   console.log(
     `${person.firstName} ${person.lastName} is a ${person.age} year old ${
       person.male ? "man" : "woman"
-    } and enjoys ${person.hobbies.join(" and ")}.`
+    } and enjoys ${
+      person.hobbies[Math.floor(Math.random() * person.hobbies.length)]
+    } and other things.`
   );
 }
