@@ -39,31 +39,51 @@ const people = [
   {
     firstName: "Paul",
     lastName: "McCartney",
+    male: true,
     age: 81,
     hobbies: ["music", "photography"],
   },
   {
     firstName: "John",
     lastName: "Lennon",
+    male: true,
     age: 40,
     hobbies: ["music", "art"],
   },
   {
     firstName: "George",
     lastName: "Harrison",
+    male: true,
     age: 58,
     hobbies: ["music", "gardening"],
   },
   {
     firstName: "Ringo",
     lastName: "Starr",
+    male: true,
     age: 83,
     hobbies: ["music", "drumming"],
+  },
+  {
+    firstName: "Yoko",
+    lastName: "Ono",
+    male: false,
+    age: 90,
+    hobbies: ["music", "art"],
   },
 ];
 
 for (let i = 0; i < people.length; i++) {
   console.log(
-    `${people[i].firstName} ${people[i].lastName} is ${people[i].age} years old and enjoys ${people[i].hobbies.join(" and ")}.`
+    `${people[i].firstName} ${people[i].lastName} is ${
+      people[i].age
+    } years old and enjoys ${people[i].hobbies.join(" and ")}.`
+  );
+}
+for (let person of people) {
+  console.log(
+    `${person.firstName} ${person.lastName} is a ${person.age} year old ${
+      person.male ? "man" : "woman"
+    } and enjoys ${person.hobbies.join(" and ")}.`
   );
 }
