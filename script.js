@@ -36,28 +36,34 @@ console.log(user);
 console.log(user.fullName()); // kaller funksjonen fullName for å få fullt navn
 
 const people = [
-    {
-        firstName: "Paul",
-        lastName: "McCartney",
-        age: 81,
-        hobbies: ["music", "photography"],
-    },
-    {
-        firstName: "John",
-        lastName: "Lennon",
-        age: 40,
-        hobbies: ["music", "art"],
-    },
-    {
-        firstName: "George",
-        lastName: "Harrison",
-        age: 58,
-        hobbies: ["music", "gardening"],
-    },
-    {
-        firstName: "Ringo",
-        lastName: "Starr",
-        age: 83,
-        hobbies: ["music", "drumming"],
-    },
-]
+  {
+    firstName: "Paul",
+    lastName: "McCartney",
+    age: 81,
+    hobbies: ["music", "photography"],
+  },
+  {
+    firstName: "John",
+    lastName: "Lennon",
+    age: 40,
+    hobbies: ["music", "art"],
+  },
+  {
+    firstName: "George",
+    lastName: "Harrison",
+    age: 58,
+    hobbies: ["music", "gardening"],
+  },
+  {
+    firstName: "Ringo",
+    lastName: "Starr",
+    age: 83,
+    hobbies: ["music", "drumming"],
+  },
+];
+
+for (let i = 0; i < people.length; i++) {
+  console.log(
+    `${people[i].firstName} ${people[i].lastName} is ${people[i].age} years old and enjoys ${people[i].hobbies.join(" and ")}.`
+  );
+}
