@@ -142,7 +142,6 @@ for (let i = 0; i < people.length; i++) {
     personWithLongestHobby = person;
   }
 }
-
 if (personWithLongestHobby) {
   console.log(
     `${personWithLongestHobby.firstName} ${
