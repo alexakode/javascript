@@ -110,6 +110,10 @@ for (let i = 0; i < people.length; i++) {
   }
 }
 console.log("Hobbies of people aged 60 and above:", hobbiesList);
+const seniorHobbies = people
+  .filter((person) => person.age >= 60)
+  .flatMap((person) => person.hobbies);
+console.log("Senior hobbies:", seniorHobbies);
 
 // Lag en liste med navn på alle som er menn
 const maleNames = [];
@@ -141,8 +145,8 @@ for (let i = 0; i < people.length; i++) {
 
 if (personWithLongestHobby) {
   console.log(
-    `${personWithLongestHobby.firstName} ${personWithLongestHobby.lastName} has the longest hobby: ${personWithLongestHobby.hobbies.join(
-      ", "
-    )}.`
+    `${personWithLongestHobby.firstName} ${
+      personWithLongestHobby.lastName
+    } has the longest hobby: ${personWithLongestHobby.hobbies.join(", ")}.`
   );
 }
