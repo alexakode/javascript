@@ -80,12 +80,69 @@ for (let i = 0; i < people.length; i++) {
     } years old and enjoys ${people[i].hobbies.join(" and ")}.`
   );
 }
+function getRandomIndex(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 for (let person of people) {
   console.log(
     `${person.firstName} ${person.lastName} is a ${person.age} year old ${
       person.male ? "man" : "woman"
-    } and enjoys ${
-      person.hobbies[Math.floor(Math.random() * person.hobbies.length)]
-    } and other things.`
+    } who enjoys ${getRandomIndex(person.hobbies)} and other things.`
+  );
+}
+let combinedAge = 0;
+for (let i = 0; i < people.length; i++) {
+  const person = people[i];
+  combinedAge += person.age;
+  console.log(`${combinedAge} is the combined age of all people so far.`);
+}
+console.log(`${combinedAge} is the combined age of all people.`);
+
+for (let i = 0; i < people.length; i++) {
+  people[i].isCool = Math.random() < 0.5; // Randomly assign isCool property
+}
+console.log(people);
+// Lag en liste med hobbier for alle som er 60+ år gamle
+const hobbiesList = [];
+for (let i = 0; i < people.length; i++) {
+  if (people[i].age >= 60) {
+    hobbiesList.push(...people[i].hobbies);
+  }
+}
+console.log("Hobbies of people aged 60 and above:", hobbiesList);
+
+// Lag en liste med navn på alle som er menn
+const maleNames = [];
+for (let i = 0; i < people.length; i++) {
+  if (people[i].male) {
+    maleNames.push(`${people[i].firstName} ${people[i].lastName}`);
+  }
+}
+console.log("Male names:", maleNames);
+// Legg til 1 til alles alder
+for (let i = 0; i < people.length; i++) {
+  people[i].age += 1;
+}
+
+// finn ut hvem som har flest bokstaver i hobbyene sine
+let maxHobbyLength = 0;
+let personWithLongestHobby = null;
+
+for (let i = 0; i < people.length; i++) {
+  const person = people[i];
+  const longestHobby = person.hobbies.reduce((longest, hobby) => {
+    return hobby.length > longest.length ? hobby : longest;
+  }, "");
+  if (longestHobby.length > maxHobbyLength) {
+    maxHobbyLength = longestHobby.length;
+    personWithLongestHobby = person;
+  }
+}
+
+if (personWithLongestHobby) {
+  console.log(
+    `${personWithLongestHobby.firstName} ${personWithLongestHobby.lastName} has the longest hobby: ${personWithLongestHobby.hobbies.join(
+      ", "
+    )}.`
   );
 }
