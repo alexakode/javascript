@@ -273,7 +273,7 @@ function helloChecker(inputString) {
     hola: "spansk",
     czesc: "polsk",
   };
-  const words = inputString.toLowerCase().split(/\s+/);
+  const words = inputString.toLowerCase().replace(/[^\w\s]/g, "").split(/\s+/);
   for (const word of words) {
     if (helloWords[word]) {
       return `HELLO oppdaget på ${helloWords[word]}.`;
