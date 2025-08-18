@@ -11,10 +11,18 @@
 }
 
 /* Stil for sirkler som legges til dynamisk */
+:root {
+  --circle-color: oklch(0.6 0.15 250); /* Default blue-ish */
+  --circle-color-red: oklch(0.6 0.15 30);
+  --circle-color-green: oklch(0.7 0.15 140);
+  --circle-color-blue: oklch(0.7 0.15 250);
+}
+
 .circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: var(--circle-color);
   margin: 5px;
+  transition: background-color 0.5s;
 }

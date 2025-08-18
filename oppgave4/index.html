@@ -12,9 +12,15 @@
     <h1>DOM Generator</h1>
     <button onclick="addCircle()">Legg til sirkel</button>
     <button onclick="removeLast()">Fjern siste</button>
-    <button onclick="changeColor('red')">Endre farge til rød</button>
-    <button onclick="changeColor('green')">Endre farge til grønn</button>
-    <button onclick="changeColor('blue')">Endre farge til blå</button>
+    <button onclick="changeColor('var(--circle-color-red)')">
+      Endre farge til rød
+    </button>
+    <button onclick="changeColor('var(--circle-color-green)')">
+      Endre farge til grønn
+    </button>
+    <button onclick="changeColor('var(--circle-color-blue)')">
+      Endre farge til blå
+    </button>
 
     <!-- Her vises resultatet av DOM-manipulasjon -->
     <div id="outputArea"></div>
