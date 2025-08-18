@@ -25,6 +25,7 @@ taskForm.addEventListener("submit", (e) => {
 
 // load individual tasks, render on page
 const buildPage = (tasks) => {
+  listContainer.replaceChildren(); // clear previous tasks
   // loop over each task, create some elements
   tasks.forEach((task) => {
     const taskContainer = document.createElement("div");
