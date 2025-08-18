@@ -1,8 +1,8 @@
 /* Enkel styling for å gjøre siden mer visuell, som anbefalt i oppgaven */
-body {
+/* body {
   font-family: sans-serif;
   padding: 20px;
-}
+} */
 
 #outputArea {
   display: flex;
