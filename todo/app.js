@@ -5,6 +5,8 @@ const taskForm = document.querySelector("#task-form");
 
 let tasks = [];
 // use local storage
+const saveTasksToStorage = () =>
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 // create todo
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -20,6 +22,7 @@ taskForm.addEventListener("submit", (e) => {
     description: userInput,
     complete: false,
   });
+  saveTasksToStorage(); // save to local storage
   renderPage();
 });
 
