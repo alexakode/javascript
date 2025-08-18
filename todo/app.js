@@ -44,8 +44,14 @@ const buildPage = (tasks) => {
 
 // render our page
 const renderPage = () => {
-  // load tasks from local storage
-
+  // load tasks from local storage. localStorage.getItem("tasks") returns a string, so we need to parse it
+  // if there are no tasks, we set tasks to an empty array
+  const storedTasks = localStorage.getItem("tasks");
+  if (storedTasks) {
+    tasks = JSON.parse(storedTasks);
+  } else {
+    tasks = [];
+  }
   // filters a-z, z-a, newest, oldest, vice versa
 
   buildPage(tasks);
