@@ -12,10 +12,11 @@
 
 /* Stil for sirkler som legges til dynamisk */
 :root {
-  --circle-color: oklch(0.6 0.15 250); /* Default blue-ish */
-  --circle-color-red: oklch(0.6 0.15 30);
-  --circle-color-green: oklch(0.7 0.15 140);
-  --circle-color-blue: oklch(0.7 0.15 250);
+  color-scheme: light dark;
+  --circle-color: light-dark(oklch(0.6 0.15 270), oklch(0.8 0.13 270));
+  --circle-color-red: light-dark(oklch(0.6 0.15 30), oklch(0.8 0.13 30));
+  --circle-color-green: light-dark(oklch(0.6 0.15 150), oklch(0.8 0.13 150));
+  --circle-color-blue: light-dark(oklch(0.6 0.15 270), oklch(0.8 0.13 270));
 }
 
 .circle {
