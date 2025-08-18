@@ -15,6 +15,10 @@ function handleCommand() {
   } else if (input.startsWith("change color")) {
     const color = input.split(" ")[2];
     changeColor(color);
+  } else if (input === "add square") {
+    addSquare();
+  } else if (input === "make squares") {
+    makeSquares();
   } else {
     // Feilhåndtering ved ukjent kommando
     alert("Ukjent kommando");
@@ -42,5 +46,27 @@ function changeColor(color) {
   const output = document.getElementById("outputArea");
   output.childNodes.forEach((el) => {
     if (el.style) el.style.backgroundColor = color;
+  });
+}
+
+function addSquare() {
+  const output = document.getElementById("outputArea");
+  const square = document.createElement("div");
+  square.classList.add("circle"); // reuse styling
+  square.style.borderRadius = "0";
+  output.appendChild(square);
+}
+
+function makeSquares() {
+  const output = document.getElementById("outputArea");
+  output.childNodes.forEach((el) => {
+    if (el.style) el.style.borderRadius = "0";
+  });
+}
+
+function makeCircles() {
+  const output = document.getElementById("outputArea");
+  output.childNodes.forEach((el) => {
+    if (el.style) el.style.borderRadius = "50%";
   });
 }
