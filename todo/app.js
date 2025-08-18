@@ -1,19 +1,27 @@
 const listContainer = document.getElementById("list-container");
 
-let tasks = [
-  {
-    description: "Buy eggs",
-    isCompleted: false,
-  },
-  {
-    description: "Buy tomatoes",
-    isCompleted: false,
-  },
-  {
-    description: "Buy cheese",
-    isCompleted: false,
-  },
-];
+const taskInput = document.querySelector("#task-input");
+const taskForm = document.querySelector("#task-form");
+
+let tasks = [];
+// use local storage
+// create todo
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(taskForm);
+  const userInput = formData.get("task-input");
+  taskInput.value = ""; // clear input field
+  //   validation
+  if (!userInput) {
+    return alert("Please enter a task.");
+  }
+  tasks.push({
+    timestamp: new Date(),
+    description: userInput,
+    complete: false,
+  });
+  renderPage();
+});
 
 // load individual tasks, render on page
 const buildPage = (tasks) => {
