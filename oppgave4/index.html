@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOM Prosjekt</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- JavaScript lastes inn med defer for å sikre at DOM er klar -->
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <h1>DOM Generator</h1>
-  <!-- Brukeren skriver kommandoer her -->
-  <input type="text" id="commandInput" placeholder="Skriv en kommando" />
-  <button onclick="handleCommand()">Kjør</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Prosjekt</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- JavaScript lastes inn med defer for å sikre at DOM er klar -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>DOM Generator</h1>
+    <!-- Brukeren skriver kommandoer her -->
+    <button onclick="addCircle()">Legg til sirkel</button>
+    <button onclick="removeLast()">Fjern siste</button>
+    <button onclick="changeColor('red')">Endre farge til rød</button>
+    <button onclick="changeColor('green')">Endre farge til grønn</button>
+    <button onclick="changeColor('blue')">Endre farge til blå</button>
 
-  <!-- Her vises resultatet av DOM-manipulasjon -->
-  <div id="outputArea"></div>
+    <!-- Her vises resultatet av DOM-manipulasjon -->
+    <div id="outputArea"></div>
 
-  <!-- Kort forklaring som kreves i oppgaven -->
-  <p>Dette er et enkelt verktøy som lar brukeren manipulere DOM-en ved å skrive kommandoer som "add circle", "remove last" og "change color red".</p>
-</body>
+    <!-- Kort forklaring som kreves i oppgaven -->
+    <p>Prøv å manipulere DOM-en ved å trykke på knappene.</p>
+  </body>
 </html>
