@@ -1,12 +1,18 @@
 const listContainer = document.getElementById("list-container");
 
 let tasks = [
-    /*
-{
-description: "Buy eggs",
-isCompleted: true,
-}
-    */ 
+  {
+    description: "Buy eggs",
+    isCompleted: false,
+  },
+  {
+    description: "Buy tomatoes",
+    isCompleted: false,
+  },
+  {
+    description: "Buy cheese",
+    isCompleted: false,
+  },
 ];
 
 // load individual tasks, render on page
@@ -19,11 +25,6 @@ const buildPage = (tasks) => {
     const descriptionElement = document.createElement("p");
     descriptionElement.classList.add("description");
     descriptionElement.textContent = task.description;
-    // {
-    // description: "buy eggs",
-    // date: "",
-    // isCompleted
-    // }
     taskContainer.append(descriptionElement);
     listContainer.append(taskContainer);
   });
@@ -37,3 +38,4 @@ const renderPage = () => {
 
   buildPage(tasks);
 };
+renderPage();
