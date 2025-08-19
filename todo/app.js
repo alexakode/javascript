@@ -26,6 +26,31 @@ taskForm.addEventListener("submit", (e) => {
   renderPage();
 });
 
+const deleteTaskButton = (task) => {
+  const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("delete-btn");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.addEventListener("click", () => {
+    const taskIndex = tasks.indexOf(task);
+    if (taskIndex > -1) {
+      tasks.splice(taskIndex, 1); // remove task from array
+      saveTasksToStorage(); // save to local storage
+      renderPage(); // re-render page
+    }
+  });
+  return deleteBtn;
+};
+const editTaskButton = (inputElement) => {
+  const editBtn = document.createElement("button");
+  editBtn.classList.add("edit-btn");
+  editBtn.textContent = "Edit";
+  editBtn.addEventListener("click", () => {
+    inputElement.readOnly = !inputElement.readOnly; // make input editable
+    inputElement.focus(); // focus on the input
+  });
+  return editBtn;
+};
+
 // load individual tasks, render on page
 const buildPage = (tasks) => {
   listContainer.replaceChildren(); // clear previous tasks
@@ -34,10 +59,16 @@ const buildPage = (tasks) => {
     const taskContainer = document.createElement("div");
     taskContainer.classList.add("task-container");
 
-    const descriptionElement = document.createElement("p");
+    const descriptionElement = document.createElement("input");
     descriptionElement.classList.add("description");
-    descriptionElement.textContent = task.description;
-    taskContainer.append(descriptionElement);
+    descriptionElement.value = task.description;
+    descriptionElement.readOnly = true; // make it read-only
+
+    taskContainer.append(
+      descriptionElement,
+      deleteTaskButton(task),
+      editTaskButton(descriptionElement)
+    );
     listContainer.append(taskContainer);
   });
 };
