@@ -2,8 +2,14 @@ const listContainer = document.getElementById("list-container");
 
 const taskInput = document.querySelector("#task-input");
 const taskForm = document.querySelector("#task-form");
+const showCompletedInput = document.querySelector("#show-completed");
 
+let filters = { showCompleted: false };
 let tasks = [];
+showCompletedInput.addEventListener("change", (e) => {
+  filters.showCompleted = e.target.checked;
+  renderPage();
+});
 // use local storage
 const saveTasksToStorage = () =>
   localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -60,6 +66,7 @@ const completeTaskInput = (task) => {
   inputElement.addEventListener("change", (e) => {
     task.complete = e.target.checked;
     saveTasksToStorage();
+    renderPage(); // re-render page to reflect changes
   });
   return inputElement;
 };
@@ -87,7 +94,7 @@ const buildPage = (tasks) => {
   });
 };
 const filterArray = (tasks) => {
-  return tasks.filter((task) => !task.complete);
+  return tasks.filter((task) => filters.showCompleted || !task.complete);
 };
 // render our page
 const renderPage = () => {
