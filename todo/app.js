@@ -40,15 +40,28 @@ const deleteTaskButton = (task) => {
   });
   return deleteBtn;
 };
-const editTaskButton = (inputElement) => {
+const editTaskButton = (task, inputElement) => {
   const editBtn = document.createElement("button");
   editBtn.classList.add("edit-btn");
   editBtn.textContent = "Edit";
   editBtn.addEventListener("click", () => {
     inputElement.readOnly = !inputElement.readOnly; // make input editable
-    inputElement.focus(); // focus on the input
+    editBtn.textContent = inputElement.readOnly ? "Edit" : "Save";
+    task.description = inputElement.value;
+    saveTasksToStorage();
   });
   return editBtn;
+};
+
+const completeTaskInput = (task) => {
+  const inputElement = document.createElement("input");
+  inputElement.type = "checkbox";
+  inputElement.checked = task.complete;
+  inputElement.addEventListener("change", () => {
+    task.complete = inputElement.checked;
+    saveTasksToStorage();
+  });
+  return inputElement;
 };
 
 // load individual tasks, render on page
@@ -66,8 +79,8 @@ const buildPage = (tasks) => {
 
     taskContainer.append(
       descriptionElement,
-      deleteTaskButton(task),
-      editTaskButton(descriptionElement)
+      editTaskButton(task, descriptionElement),
+      deleteTaskButton(task)
     );
     listContainer.append(taskContainer);
   });
