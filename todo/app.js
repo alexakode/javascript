@@ -57,8 +57,8 @@ const completeTaskInput = (task) => {
   const inputElement = document.createElement("input");
   inputElement.type = "checkbox";
   inputElement.checked = task.complete;
-  inputElement.addEventListener("change", () => {
-    task.complete = inputElement.checked;
+  inputElement.addEventListener("change", (e) => {
+    task.complete = e.target.checked;
     saveTasksToStorage();
   });
   return inputElement;
@@ -79,13 +79,16 @@ const buildPage = (tasks) => {
 
     taskContainer.append(
       descriptionElement,
+      completeTaskInput(task),
       editTaskButton(task, descriptionElement),
       deleteTaskButton(task)
     );
     listContainer.append(taskContainer);
   });
 };
-
+const filterArray = (tasks) => {
+  return tasks.filter((task) => !task.complete);
+};
 // render our page
 const renderPage = () => {
   // load tasks from local storage. localStorage.getItem("tasks") returns a string, so we need to parse it
@@ -98,6 +101,6 @@ const renderPage = () => {
   }
   // filters a-z, z-a, newest, oldest, vice versa
 
-  buildPage(tasks);
+  buildPage(filterArray(tasks));
 };
 renderPage();
